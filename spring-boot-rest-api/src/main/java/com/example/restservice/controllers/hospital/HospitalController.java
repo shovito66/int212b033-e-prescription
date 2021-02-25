@@ -76,7 +76,7 @@ public class HospitalController {
     }
 
     @PutMapping("/hospitals/{id}")
-    public ResponseEntity<Hospital> updateTutorial(@PathVariable("id") String id, @RequestBody Hospital hospital) {
+    public ResponseEntity<Hospital> updateHospital(@PathVariable("id") String id, @RequestBody Hospital hospital) {
         Optional<Hospital> hospitalData = hospitalRepository.findById(id);
 
         if (hospitalData.isPresent()) {
